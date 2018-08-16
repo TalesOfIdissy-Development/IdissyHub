@@ -1,0 +1,217 @@
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=#
+#  _____    _ _               _    _       _         #
+# |_   _|  | (_)             | |  | |     | |        #
+#   | |  __| |_ ___ ___ _   _| |__| |_   _| |__      #
+#   | | / _` | / __/ __| | | |  __  | | | | '_ \     #
+#  _| || (_| | \__ \__ \ |_| | |  | | |_| | |_) |    #
+# |_____\__,_|_|___/___/\__, |_|  |_|\__,_|_.__/     #
+#                        __/ |                       #
+#                       |___/                        #
+#                                                    #
+#              -- By dahpr0gam3r --                  #
+#-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=-=#
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# GENERAL SETTINGS
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# Put the name of the hub server below
+hub-command:
+  hub-server: 'hub'
+
+# List any worlds you don't want IdissyHub to manage
+disabled-worlds:
+  - world_the_nether
+
+  
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# CHAT MANAGEMENT
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+Plugin_Blocker:
+  Enabled: true
+  Deny_Message: '%prefix% &cThis command is blocked'
+  Blocked_Commands:
+    - /pl
+    - /plugins
+    - /?
+    - /bukkit:?
+    - /bukkit:plugins
+    - /bukkit:pl
+    - /ver
+    - /version
+    - /bukkit:version
+    - /bukkit:ver
+    
+Anti-Swear:
+  Enabled: true
+  Swear_Block: '%prefix% &cMessage removed by anti-swear systems'
+  Swear_Admin_Notify: '%prefix% &c%player% &7attempted to say: &b%word%'
+  Blocked_Words:
+    - fuck
+    - shit
+    - bitch
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# WORLD EVENTS SETTINGS                     #
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+World_Settings:
+
+  Disable_Hunger_Loss: true
+
+  Disable_Fall_Damage: true
+
+  Disable_Weather_Change: true
+
+# When a player falls into the void, should they will be teleported back to the set spawn point?
+  Disable_Void_Death: true
+
+  Item_Drop:
+    Disabled: true
+    Deny_Message: '%prefix% &cYou are not allowed to drop items.'
+
+  Item_Pickup:
+    Disabled: true
+    Deny_Message: '%prefix% &cYou are not allowed to pickup items.'
+
+  Block_Break:
+    Disabled: true
+    Deny_Message: '%prefix% &cYou are not allowed to break blocks.'
+
+  Block_Place:
+    Disabled: true
+    Deny_Message: '%prefix% &cYou are not allowed to place blocks.'
+
+  PvP:
+    Disabled: true
+    Deny_Message: '%prefix% &cYou are not allowed to pvp here.'
+
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# JOIN EVENTS
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+Join_Leave_Messages:
+  # Should me.dahpr0gam3r.IdissyHub handle join/quit messages?
+  Enabled: true
+
+  # Set to '' if you wish silent join/quit messages
+  Join: '&8(&2&l+&8) &e%player% &aConnected'
+  Quit: '&8(&4&l-&8) &e%player% &cDisconnected'
+
+# PlaceholderAPI is supported, the only placeholder built into Idissy is %player%.
+# Use PAPI to get a huge library of placeholders from other popular plugins.
+# Make sure you have it installed and the expansions downloaded you wish to use.
+#
+# VALID JOIN EVENTS: 
+# [message] - Send the player a message
+# [title] e.g. MainTitle;Subtitle - Send the player a title message
+# [sound] - Send the player a sound
+# [command] - Execute a command as the player
+# [consolecommand] - Execute a command as console
+#
+Join_Events:
+  - '[message] &8&m+------------***------------+'
+  - '[message] &r'
+  - '[message]           &e&l* &6&lW E L C O M E &e&l*'
+  - '[message] &e           To &bMyServer &e%player%     '
+  - '[message] &r'
+  - '[message] &fYou can edit this message in the config.yml!'
+  - '[message] &r'
+  - '[message] &7&oPowered By Idissy'
+  - '[message] &8&m+------------***------------+'
+  - '[title] &eWelcome &9%player%;&6To &bMyServer'
+  - '[sound] ENTITY_PLAYER_LEVELUP'
+
+# Extra join events
+Player_Join_Settings:
+  Heal: true
+  Extinguish: true
+  Firework: true
+  Clear_Inventory: false
+  
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# SERVER SELECTOR
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# You can use PlaceholderAPI in the lore section
+# of each item in the GUI for example to display
+# how many players are on each server using the
+# PAPI Bungee expansion!
+#
+# Permission section:
+# valid values are in the format of idissyhub.server.[1-20]
+
+Server_Selector:
+  Enabled: true
+  
+  Item: COMPASS
+  Amount: 1
+  Data: 0
+  Slot: 4
+  Name: '&eServer Selector &7(Right-Click)'
+  Lore: 
+    - '&7Click to open the server selector!'
+  
+  GUI:
+    Name: 'Server Selector'
+    Slots: 27
+    Items:
+      factions:
+        Item: TNT
+        Data: 0
+        Slot: 11
+        Amount: 1
+        Name: '&eFactions'
+        Lore:
+          - '&7Join now!'
+          - '&aPlaceholderAPI support!'
+        Commands:
+          - '[bungee] factions'
+          - '[message] &7Sending you to: &eFactions'
+        Permission: 'idissyhub.server.2'
+      survival:
+        Item: GRASS
+        Data: 0
+        Slot: 15
+        Amount: 1
+        Name: '&aSurvival'
+        Lore:
+          - '&7Join now!'
+          - '&aMulti lore support too!'
+        Commands:
+          - '[bungee] survival'
+          - '[message] &7Sending you to: &eSurvival'
+        Permission: 'idissyhub.server.1'
+        
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# PLAYER HIDER
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+Player_Hider:
+  Enabled: true
+  Slot: 8
+  # Cooldown in seconds
+  Cooldown: 3
+  
+  Not_Hidden:
+    Item: INK_SACK
+    Amount: 1
+    Data: 10
+    Name: '&dPlayers &8&l> &aShown &7(Right-Click)'
+    Lore: 
+      - '&7Click to hide all players!'
+      
+  Hidden:
+    Item: INK_SACK
+    Amount: 1
+    Data: 8
+    Name: '&dPlayers &8&l> &cHidden &7(Right-Click)'
+    Lore: 
+      - '&7Click to show all players!'
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# CUSTOM HELP
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+HelpCommand:
+  HelpMessage:
+    - '&6------------------ Help -----------------------&r'
+    - '&e- Type &o/hub&e to get back to the hub&r'
+    - '&e- Type &o/report <Player>&e to report a player&r'
+    - '&6------------------ Help -----------------------&r'

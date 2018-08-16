@@ -1,0 +1,28 @@
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+# PLUGIN MESSAGES
+#~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~~#
+
+Messages:
+  Prefix: '&dIdissy &8❙'
+  No_Permission: '%prefix% &cYou are forbidden to use this.' 
+  Player_Not_Valid: '%prefix% &c%player% is not online!' 
+  Config_Reloaded: '%prefix% &aAll configuration files has been reloaded' 
+  Gamemode: '%prefix% &7You have changed gamemode to &a%gamemode%'
+  Gamemode_Usage: '%prefix% &cUsage: /gamemode <gamemode>'
+  Vanish_Enable: '%prefix% &aYou have now vanished'
+  Vanish_Disable: '%prefix% &cYou have now unvanished'
+  Healed: '%prefix% &aYou have been healed'
+  Healed_Other: '%prefix% &aYou have healed %player%'
+  Flight_Enable: '%prefix% &aYou have enabled flight'
+  Flight_Disable: '%prefix% &cYou have disabled flight'
+  Players_Hidden: '%prefix% &cPlayer visibility disabled'
+  Players_Shown: '%prefix% &aPlayer visibility enabled'
+  Cooldown_Active: '%prefix% &cYou must wait &e%time%s &cbefore doing this again!'
+  Flight_Disable: '%prefix% &cYou have disabled flight'
+  Clear_Inventory: '%prefix% &aYour inventory has been cleared'
+  Clear_Inventory_Other: "%prefix% &aYou have cleared %player%'s inventory"
+  Set_Spawn: '%prefix% &aYou have successfully set the spawn point'
+  Clearchat: '&b&l* &fChat has been cleared by &e%player% &b&l*'
+  Chat_Locked: '%prefix% &cChat is currently locked'
+  Chat_Lock_Broadcast: '%prefix% &e%player% &chas locked global chat'
+  Chat_Unlock_Broadcast: '%prefix% &e%player% &ahas unlocked global chat'

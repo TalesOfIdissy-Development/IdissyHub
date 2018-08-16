@@ -1,0 +1,122 @@
+name: IdissyHub
+author: dahpr0gam3r
+version: 1.2.0
+main: me.dahpr0gam3r.IdissyHub.IdissyHub
+softdepend: [PlaceholderAPI]
+commands:
+     vanish:
+       description: Vanish
+       aliases: [v]
+     fly:
+       description: Flight
+     idissyhub:
+       description: Plugin Info
+       aliases: [ihub]
+     setspawn:
+       description: Set the server spawn
+     spawn:
+       description: Teleport to the server spawn
+     gamemode:
+       description: Change gamemode
+       aliases: [gm]
+     gms:
+       description: Survival
+     gmc:
+       description: Creative
+     gma:
+       description: Adventure
+     gmsp:
+       description: Spectator
+     clearinventory:
+       description: Clear your inventory
+       aliases: [clearinv, ci]
+     heal:
+       description: Heal yourself
+     clearchat:
+       description: Clear global chat
+     lockchat:
+       description: Lock global chat
+     hub:
+        description: Connect to the hub server
+     help:
+       description: Shows custom help
+     "?":
+       description: Shows custom help
+
+permissions:
+  idissyhub.help:
+    default: op
+  idissyhub.vanish:
+    default: op
+  idissyhub.reload:
+    default: op
+  idissyhub.fly:
+    default: op
+  idissyhub.setspawn:
+    default: op
+  idissyhub.gamemode:
+    default: op
+  idissyhub.clearinventory:
+    default: op
+  idissyhub.heal:
+    default: op
+  idissyhub.heal.others:
+    default: op
+  idissyhub.clearchat:
+    default: op
+  idissyhub.block.break:
+    default: op
+  idissyhub.block.place:
+    default: op
+  idissyhub.player.pvp:
+    default: op
+  idissyhub.item.drop:
+    default: op
+  idissyhub.item.pickup:
+    default: op
+  idissyhub.blockedcommands.bypass:
+    default: op
+  idissyhub.lockchat:
+    default: op
+  idissyhub.lockchat.bypass:
+    default: op
+  idissyhub.server.1:
+    default: op
+  idissyhub.server.2:
+      default: op
+  idissyhub.server.3:
+    default: op
+  idissyhub.server.4:
+    default: op
+  idissyhub.server.5:
+    default: op
+  idissyhub.server.6:
+    default: op
+  idissyhub.server.7:
+    default: op
+  idissyhub.server.8:
+    default: op
+  idissyhub.server.9:
+    default: op
+  idissyhub.server.10:
+    default: op
+  idissyhub.server.11:
+    default: op
+  idissyhub.server.12:
+    default: op
+  idissyhub.server.13:
+    default: op
+  idissyhub.server.14:
+    default: op
+  idissyhub.server.15:
+    default: op
+  idissyhub.server.16:
+    default: op
+  idissyhub.server.17:
+    default: op
+  idissyhub.server.18:
+    default: op
+  idissyhub.server.19:
+    default: op
+  idissyhub.server.20:
+    default: op
