@@ -3,6 +3,7 @@ author: dahpr0gam3r
 version: 1.2.0
 main: me.dahpr0gam3r.IdissyHub.IdissyHub
 softdepend: [PlaceholderAPI]
+depend: [IdissyCore]
 commands:
      vanish:
        description: Vanish

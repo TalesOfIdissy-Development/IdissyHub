@@ -26,6 +26,7 @@ package me.dahpr0gam3r.IdissyHub;
 
 import com.google.common.io.ByteArrayDataOutput;
 import com.google.common.io.ByteStreams;
+import me.dahpr0gam3r.IdissyCore.IdissyCore;
 import me.dahpr0gam3r.IdissyHub.Commands.*;
 import me.dahpr0gam3r.IdissyHub.Commands.Gamemode.*;
 import me.dahpr0gam3r.IdissyHub.Config.Data;
@@ -107,7 +108,7 @@ implements Listener {
         this.getServer().getMessenger().registerOutgoingPluginChannel((Plugin)this, "BungeeCord");
         this.loadConfig();
         this.reload_Config();
-        this.sendStart();
+        IdissyCore.sendStart(this);
         if (Bukkit.getVersion().contains("1.8")) {
             this.version_8 = true;
         }
@@ -126,15 +127,6 @@ implements Listener {
     }
 
 
-    private void sendStart() {
-        PluginDescriptionFile pdfFile = this.getDescription();
-        Bukkit.getConsoleSender().sendMessage("");
-        Bukkit.getConsoleSender().sendMessage((Object)ChatColor.GRAY + "=========> " + (Object)ChatColor.LIGHT_PURPLE + "IdissyHub" + (Object)ChatColor.GRAY + " <=========");
-        Bukkit.getConsoleSender().sendMessage((Object)ChatColor.LIGHT_PURPLE + "IdissyHub");
-        Bukkit.getConsoleSender().sendMessage((Object)ChatColor.YELLOW + "Made By " + (Object)ChatColor.RED + "dahpr0gam3r");
-        Bukkit.getConsoleSender().sendMessage((Object)ChatColor.YELLOW + "Version " + (Object)ChatColor.RED + pdfFile.getVersion());
-        Bukkit.getConsoleSender().sendMessage("");
-    }
 
     public boolean onCommand(CommandSender sender, Command cmd, String commandLabel, String[] args) {
         PluginDescriptionFile pdfFile = this.getDescription();
